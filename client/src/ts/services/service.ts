@@ -47,10 +47,10 @@ const port: number = 5000;
 if (process.env.NODE_ENV === "development") {
     // baseUrl = `http://192.168.1.64:${port}${baseUrl}`;
     // base = `http://192.168.1.64:${port}`;
-    baseUrl = `http://192.168.1.130:${port}${baseUrl}`;
-    base = `http://192.168.1.130:${port}`;
-    // baseUrl = `http://localhost:${port}${baseUrl}`;
-    // base = `http://localhost:${port}`;
+    // baseUrl = `http://192.168.1.130:${port}${baseUrl}`;
+    // base = `http://192.168.1.130:${port}`;
+    baseUrl = `http://localhost:${port}${baseUrl}`;
+    base = `http://localhost:${port}`;
 }
 
 export interface IFile {
