@@ -31,11 +31,12 @@ app.get("/defaults/*", (req, res) => {
 });
 
 const useStatic = () => {
-        app.use("/", express.static(path.join(__dirname, "client", "dist")));
+    console.log(__dirname)
+        app.use("/", express.static(path.join(__dirname, "../" , "client", "dist")));
 
         app.get("*", (req, res) => {
             res.sendFile(
-                path.resolve(__dirname, "client", "dist", "index.html")
+                path.resolve(__dirname, "../", "client", "dist", "index.html")
             );
         });
 
