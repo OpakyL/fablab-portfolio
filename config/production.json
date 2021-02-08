@@ -1,0 +1,6 @@
+{
+    "port": 3000,
+    "jwtSecret": "OpakyL's secret code",
+    "mongoUri": "mongodb+srv://OpakyL:varmilo123@cluster0.hr3pg.azure.mongodb.net/app?retryWrites=true&w=majority",
+    "baseUrl": "http://localhost:80"
+}

@@ -1,0 +1,141 @@
+.button {
+    color: $mainFontColor;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+    border-color: transparent;
+    background: $mainOrangeColor;
+    &-loginForm {
+        height: rem(45);
+        width: 100%;
+    }
+
+    &-play {
+        background: $mainGrayColorAlpha;
+        min-width: rem(80);
+        min-height: rem(80);
+        border-radius: 100%;
+        position: relative;
+
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .bar {
+            width: 4px;
+            height: 33px;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            border-radius: 20px;
+            transform: translateY(-50%);
+            &-1 {
+                right: 8px;
+            }
+
+            &-2 {
+                left: 8px;
+            }
+        }
+    }
+
+    &-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: rem(12);
+
+        &-courses {
+            right: rem(16);
+        }
+
+        &-animated {
+            animation: arrowAnimation 1s ease infinite;
+        }
+    }
+
+    &-course {
+        width: rem(180);
+    }
+
+    &-home {
+        text-transform: uppercase;
+        position: relative;
+        background: $mainOrangeColor;
+        padding: rem(10) rem(45) rem(10) rem(20);
+        border-radius: 40px;
+        line-height: 1;
+        transition: background 0.5s;
+        font-size: rem(17);
+        &-gray {
+            background: $mainGrayColor;
+        }
+
+        &-kostyl {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-ml15 {
+        margin-left: rem(15);
+    }
+    &-event {
+        position: relative;
+        padding: 5px 30px 5px 15px;
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+            right: 2px;
+        }
+    }
+
+    &-contacts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 10px 0;
+        height: 48px;
+        text-transform: uppercase;
+        padding: 0;
+        font-size: 20px;
+        border-radius: 50px;
+    }
+
+    &-teacher {
+        display: inline-block;
+        padding: 5px 20px;
+    }
+}
+
+@media screen and (max-width: $desktopWidth) {
+    .button {
+        &-play {
+            margin-top: rem(50);
+            margin-bottom: rem(20);
+        }
+    }
+}
+@media screen and (max-width: $phoneWidth) {
+    .button {
+        &-play {
+            margin: rem(30) 0;
+        }
+        &-arrow {
+            width: rem(22);
+            right: rem(8);
+        }
+        &-home {
+            font-size: rem(12);
+            padding-right: rem(30);
+            &-ml25 {
+                margin-left: rem(10);
+            }
+        }
+    }
+}

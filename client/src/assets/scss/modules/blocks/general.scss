@@ -1,0 +1,38 @@
+.link-login {
+    cursor: pointer;
+    padding: 0.4rem;
+}
+
+.cross {
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 30px;
+    right: 30px;
+    padding: rem(20);
+
+    &::after {
+        content: "";
+        position: absolute;
+        border-radius: 2px;
+        top: 18px;
+        left: 8px;
+        background-color: white;
+        width: 25px;
+        height: 2px;
+        transform: rotate(45deg);
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        border-radius: 2px;
+        top: 18px;
+        left: 8px;
+        background-color: white;
+        width: 25px;
+        height: 2px;
+        transform: rotate(-45deg);
+    }
+}

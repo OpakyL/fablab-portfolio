@@ -1,0 +1,46 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server.js",
+    "server": "nodemon server.js",
+    "client": "npm run dev --prefix client",
+    "client:install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MisheviyOpakyL/fablab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MisheviyOpakyL/fablab/issues"
+  },
+  "homepage": "https://github.com/MisheviyOpakyL/fablab#readme",
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "cross-env": "^7.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.2.5",
+    "cors": "^2.8.5",
+    "ddos": "^0.2.1",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "express-validator": "^6.3.1",
+    "handlebars": "^4.7.3",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "mongoose": "^5.8.10",
+    "nearest-date": "^1.0.1",
+    "nodemailer": "^6.4.2",
+    "rand-token": "^0.4.0",
+    "uuid": "^3.4.0"
+  }
+}

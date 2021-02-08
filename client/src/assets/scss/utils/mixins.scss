@@ -1,0 +1,34 @@
+// px to rem
+@function rem($pixels, $context: $mainFontSize) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return $pixels / $context * 1rem;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin shadow(
+    $horizontalOffset: -5px,
+    $verticalOffset: 5px,
+    $blurRadius: 10px,
+    $spreadRadius: 0,
+    $color: $shadowColor
+) {
+    box-shadow: $horizontalOffset $verticalOffset $blurRadius $spreadRadius
+        $color;
+}

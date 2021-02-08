@@ -1,0 +1,42 @@
+.slick-dots {
+    li {
+        button:before {
+            font-size: 10px;
+            color: white;
+        }
+    }
+}
+
+.slick-dots li.slick-active button:before {
+    color: $mainOrangeColor;
+}
+
+.slick-slide {
+    padding: 0 rem(15);
+    overflow: hidden;
+}
+
+.slick-slider {
+    div {
+        outline: none;
+    }
+}
+
+.courses .slick-slider {
+    div {
+        margin: 0 auto;
+    }
+}
+
+.slick-slider {
+    padding-bottom: rem(25);
+}
+
+.home .slick-slider {
+    padding-bottom: 0;
+}
+
+.home .slick-dots {
+    bottom: -40px;
+    margin-bottom: rem(15);
+}

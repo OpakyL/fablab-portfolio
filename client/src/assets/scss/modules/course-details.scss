@@ -1,0 +1,59 @@
+.courseDetails {
+    animation: blockExpand 1s ease 1 forwards;
+    position: relative;
+    width: 100%;
+    height: 90%;
+    border-radius: 20px;
+    background: $mainGrayColorAlpha;
+    padding: rem(30) rem(30) rem(60) rem(30);
+    overflow: hidden;
+
+    //TODO VOZMOJNO RAZOBRATSA TO I STOIT NO POKA POXYU
+    // &__info {
+    //     height: 400px;
+    //     overflow-y: scroll;
+    // }
+
+    &-close {
+        animation: blockDecrease 1s ease 1 forwards;
+
+        .courseDetails {
+            &__text {
+                animation: CDFadeOut 0.5s ease 1 forwards;
+            }
+            &__buttons {
+                animation: CDFadeOut 0.5s ease 1 forwards;
+            }
+        }
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    &-mr20 {
+        display: inline-block;
+        margin-right: 20px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__info {
+        margin-left: 5px;
+    }
+
+    &__text {
+        opacity: 0;
+        animation: CDFadeIn 2s ease 1 forwards;
+    }
+
+    &__buttons {
+        opacity: 0;
+        animation: CDFadeIn 2s ease 1 forwards;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+}

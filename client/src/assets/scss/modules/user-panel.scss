@@ -1,0 +1,40 @@
+.userpanel {
+    &-layout {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+    position: absolute;
+    top: rem(40);
+    right: rem(40);
+
+    &-item {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-transform: uppercase;
+        margin-bottom: 26px;
+        img {
+            margin-left: 20px;
+        }
+        cursor: pointer;
+    }
+}
+// .userPanel {
+//     width: 5rem;
+//     text-align: center;
+//     display: flex;
+//     position: fixed;
+//     right: 5rem;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     a {
+//         color: white;
+//     }
+//     &__icon {
+//         width: 1.5rem;
+//         height: 1.5rem;
+//     }
+// }

@@ -1,0 +1,156 @@
+.event {
+    &-row {
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        margin-bottom: rem(16);
+        font-size: rem(18);
+        background: $mainGrayColorAlpha;
+        border-radius: 50px;
+        text-transform: uppercase;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        // flex-wrap: wrap;
+        transition: 0.9s all;
+    }
+
+    &-date {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        // padding: 0 10px;
+        flex: 0 3 400px;
+        text-transform: uppercase;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+    &-title {
+        text-transform: uppercase;
+        flex: 0 2 500px;
+    }
+
+    &-button {
+        margin-left: 10px;
+    }
+
+    &-details {
+        overflow: hidden;
+        animation: blockExpand 1s ease 1 forwards;
+        position: relative;
+        width: 100%;
+        height: 550px;
+        border-radius: 20px;
+        background: $mainGrayColorAlpha;
+        padding: rem(30) rem(10) 55px rem(30);
+
+        &-closing {
+            animation: blockDecrease 1s ease forwards;
+        }
+    }
+
+    &-info {
+        min-height: 450px;
+        padding-bottom: 40px;
+
+        .event {
+            &-header {
+                display: flex;
+                margin-bottom: 20px;
+            }
+            &-date {
+                display: flex;
+                flex-direction: row;
+                flex: none;
+                margin-left: 0;
+            }
+            &-day {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &-footer {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.events {
+    padding: 10px;
+
+    &-slider {
+        height: 100%;
+        transition: 1s all;
+    }
+
+    &-close {
+        height: 100%;
+        animation: eventDecrease 1s ease forwards;
+        overflow: hidden;
+    }
+    &-open {
+        overflow: hidden;
+        height: 0;
+        animation: eventExpand 1s ease forwards;
+        // height: auto;
+        // overflow: hidden;
+    }
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+    .event {
+        &-row {
+            flex-direction: column;
+            align-items: flex-start;
+            border-radius: 20px;
+            // flex-wrap: wrap;
+        }
+
+        &-date {
+            flex: none;
+            width: 100%;
+            justify-content: flex-start;
+            // margin-bottom: rem(10);
+        }
+
+        &-day {
+            margin-right: 20px;
+        }
+
+        &-title {
+            flex: none;
+            padding-top: 10px;
+            // margin-bottom: rem(10);
+            padding-left: 10px;
+            // width: 80%;
+        }
+
+        &-button {
+            // flex: none;
+            position: absolute;
+            right: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: $phoneWidth) {
+    .event {
+        &-date {
+            flex-direction: column;
+            padding-left: 10px;
+        }
+
+        &-title {
+            padding-left: 20px;
+        }
+
+        &-butten {
+            right: 30px;
+        }
+    }
+}

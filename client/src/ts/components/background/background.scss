@@ -1,0 +1,19 @@
+.background {
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("/assets/img/background.jpg") 50% / cover fixed;
+    &-dark {
+        background: url("/assets/img/background-dark.jpg") 50% / cover fixed;
+    }
+}
+
+
+@media screen and (max-width: $smDesktopWidth) {
+    .background, .background-dark {
+        background-position: left center;
+    }
+}

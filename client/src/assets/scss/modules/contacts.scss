@@ -1,0 +1,69 @@
+.contacts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-links {
+    display: flex;
+    
+}
+.links {
+    font-size: 20px;
+    color: white;
+    display: block;
+}
+
+.link {
+    display: flex;
+    color: white;
+    justify-content: flex-start;
+    width: 300px;
+    padding: 10px;
+    padding-left: 25px;
+    margin: 10px 0;
+    border: 2px solid #ffffff;
+    border-radius: 27px;
+    transition: 0.5s border-color;
+}
+
+.link:hover {
+    border-color: $mainOrangeColor;
+}
+
+.link div {
+    display: flex;
+    align-items: center;
+}
+
+.link-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.ico img {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+#vk {
+    filter: invert(100%);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    filter: invert(100%);
+}
+
+.logo img {
+    max-width: 400px;
+}
+
+@media screen and (max-width: 440px) {
+    .logo {
+        padding: 30px 50px;
+    }
+}

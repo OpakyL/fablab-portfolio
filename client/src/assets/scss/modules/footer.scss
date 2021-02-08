@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    left: 50%;
+    align-items: center;
+    transform: translate(-50%);
+    padding: 8px;
+    a {
+        display: flex;
+        transition: 0.5s all;
+        
+        &:not(:last-child) {
+            margin-right: rem(12);
+        }
+
+        &:hover {
+            filter: invert(62%) sepia(36%) saturate(6229%) hue-rotate(0deg)
+                brightness(107%) contrast(106%);
+        }
+    }
+}

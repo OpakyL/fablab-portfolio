@@ -1,0 +1,38 @@
+.title {
+    color: white;
+    text-transform: uppercase;
+    line-height: 0.8;
+    font-weight: 700;
+    position: relative;
+    &-home {
+        position: relative;
+        font-size: rem(56);
+        margin-bottom: rem(35);
+
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translateY((-50%));
+            margin-left: rem(15);
+        }
+    }
+}
+
+@media screen and (max-width: $tableWidth) {
+    .title {
+        &-home {
+            font-size: rem(50);
+        }
+    }
+}
+@media screen and (max-width: $phoneWidth) {
+    .title {
+        text-align: center;
+        &-home {
+            margin-bottom: rem(20);
+            img {
+                display: none;
+            }
+        }
+    }
+}

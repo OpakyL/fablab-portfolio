@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "ObjectSans";
+    src: local("Rubik-400"), url("/assets/fonts/ObjectSans-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ObjectSans";
+    src: local("Rubik-300"), url("/assets/fonts/ObjectSans-Heavy.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ObjectSans";
+    src: local("Rubik-500"), url("/assets/fonts/ObjectSans-HeavySlanted.ttf");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SegoeUi";
+    src: local("SegoeUi-400"), url("/assets/fonts/SegoeUI.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SegoeUi";
+    src: local("SegoeUi-700"), url("/assets/fonts/SegoeUI-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}

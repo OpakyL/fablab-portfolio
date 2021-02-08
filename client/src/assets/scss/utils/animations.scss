@@ -1,0 +1,116 @@
+// @keyframes fadeIn {
+//     from {
+//         opacity: 0;
+//     }
+//     to {
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes extend {
+//     from {
+//         opacity: 0;
+//         width: 0;
+//     }
+//     to {
+//         opacity: 1;
+//         width: calc(100% - 3.3rem);
+//     }
+// }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        height: 0;
+    }
+    to {
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes arrowAnimation {
+    from {
+        right: rem(16);
+    }
+    to {
+        right: rem(10);
+    }
+}
+
+@keyframes pageClose {
+    from {
+        height: 520px;
+    }
+    to {
+        height: 0;
+    }
+}
+@keyframes pageOpen {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        height: 520px;
+        opacity: 1;
+    }
+}
+
+@keyframes blockExpand {
+    from {
+        opacity: 0;
+        height: 0;
+    }
+    to {
+        opacity: 1;
+        height: 90%;
+    }
+}
+
+@keyframes blockDecrease {
+    from {
+        opacity: 1;
+        height: 90%;
+    }
+    to {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+@keyframes eventExpand {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes eventDecrease {
+    from {
+        height: 100%;
+    }
+    to {
+        height: 0;
+    }
+}
+
+@keyframes CDFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes CDFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

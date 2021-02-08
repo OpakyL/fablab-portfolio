@@ -1,0 +1,190 @@
+.home {
+    width: 100%;
+    height: 100%;
+    min-height: 750px;
+    display: flex;
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    &__info {
+        margin-left: 20px;
+        position: relative;
+        height: rem(650);
+        background: $mainGrayColorAlpha;
+        border-radius: 40px;
+        padding: rem(20) rem(25) rem(20) rem(40);
+        min-width: rem(825);
+        width: rem(940);
+        transition: height 1.5s;
+
+        .cross {
+            display: block;
+        }
+
+        &__closest {
+            display: flex;
+            justify-content: flex-start;
+            line-height: 2.2;
+
+            &__text {
+                margin-right: rem(20);
+            }
+        }
+        &__buttons {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__text {
+            margin-left: rem(40);
+            width: rem(680);
+        }
+
+        &__top {
+            margin-top: rem(20);
+            margin-left: rem(30);
+            opacity: 0;
+            height: 0px;
+            animation: fadeIn 2s ease 1s forwards;
+            overflow-y: hidden;
+        }
+
+        &__bottom {
+            position: absolute;
+            bottom: rem(18);
+            width: 93%;
+            line-height: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-closed {
+            height: rem(80);
+
+            .cross {
+                display: none;
+            }
+            .rotating-arrow {
+                transition: transform 1s;
+                transform: translateY(-50%) rotateY(-180deg);
+            }
+            .home {
+                &__info {
+                    &__top {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__video {
+        z-index: -1;
+        top: 0;
+        right: 0;
+        position: fixed;
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+}
+
+.rotating-arrow {
+    transition: transform 1s;
+    transform: translateY(-50%) rotateY(180deg);
+}
+
+@media screen and (max-width: $desktopWidth) {
+    .home {
+        min-height: 670px;
+        &__wrapper {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__info {
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: $smDesktopWidth) {
+    .home {
+        min-height: 640px;
+        &__info {
+            min-width: 0;
+            &__bottom {
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            &__buttons {
+                margin-top: rem(20);
+            }
+            &-closed {
+                height: rem(115);
+            }
+
+            &__text {
+                margin-left: rem(20);
+                width: 90%;
+            }
+        }
+    }
+}
+@media screen and (max-width: $tableWidth) {
+    .home {
+        min-height: 700px;
+        &__info {
+            border-radius: 20px;
+            width: 90%;
+            margin: 0;
+            font-size: rem(17);
+            margin-top: 55px;
+            &__bottom {
+                width: 100%;
+                left: 0;
+            }
+            &-closed {
+                height: rem(115);
+            }
+        }
+    }
+}
+@media screen and (max-width: $phoneWidth) {
+    .home {
+        min-height: 0;
+
+        &__wrapper {
+            justify-content: flex-start;
+        }
+
+        &__info {
+            padding: rem(20) rem(25) rem(20) rem(20);
+
+            &__top {
+                margin-top: 0;
+            }
+
+            &__text {
+                min-width: rem(300);
+                margin-left: rem(5);
+            }
+            &-closed {
+                height: rem(115);
+            }
+        }
+    }
+}
+
+.play-img {
+    width: 40px;
+    filter: invert(1);
+    position: relative;
+    left: 4px;
+}
