@@ -43,7 +43,7 @@ const useStatic = () => {
 
 };
 
-const PORT = config.get("port") || 5000;
+const PORT = process.env.PORT || 8080;
 
 async function start() {
     try {
