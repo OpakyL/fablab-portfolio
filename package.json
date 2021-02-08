@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "npm start": "cross-env NODE_ENV=production NODE_OPTIONS='--trace-warnings' node server.js",
+    "npm start": "cross-env NODE_ENV=production node --trace-warnings server.js",
     "server": "nodemon server.js",
     "client": "npm run dev --prefix client",
     "client:install": "npm install --prefix client",
