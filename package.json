@@ -4,7 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "npm start": "cross-env NODE_ENV=production node server.js",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "install-client": "cd client && npm i --also=dev",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "build": "cd client && npm run build",
     "server": "nodemon server.js",
     "client": "npm run dev --prefix client",
     "client:install": "npm install --prefix client",
