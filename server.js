@@ -23,42 +23,45 @@ app.use("/api", require("./routes/events.routes"));
 app.use("/api", require("./routes/contacts.routes"));
 
 app.get("/uploads/*", (req, res) => {
-  res.sendFile(path.join(__dirname, req.url));
+    res.sendFile(path.join(__dirname, req.url));
 });
 
 app.get("/defaults/*", (req, res) => {
-  res.sendFile(path.join(__dirname, req.url));
+    res.sendFile(path.join(__dirname, req.url));
 });
 
 const useStatic = () => {
-  app.use("/", express.static(path.join(__dirname, "client", "dist")));
+        app.use("/", express.static(path.join(__dirname, "client", "dist")));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
-  });
+        app.get("*", (req, res) => {
+            res.sendFile(
+                path.resolve(__dirname, "client", "dist", "index.html")
+            );
+        });
 
-  console.log("Using static files...");
+        console.log("Using static files...");
+
 };
 
 const PORT = config.get("port") || 5000;
 
 async function start() {
-  try {
-    useStatic();
-    await mongoose.connect(config.get("mongoUri"), {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-    });
-    initTokens();
-    console.log("Successfully connected to database");
-    app.listen(PORT, () =>
-      console.log(`App has been started on port ${PORT}...`)
-    );
-  } catch (e) {
-    console.log("Server Error", e.message);
-    process.exit(1);
-  }
+    try {
+        useStatic();
+        await mongoose.connect(config.get("mongoUri"), {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true
+        });
+        initTokens();
+        console.log("Successfully connected to database");
+        app.listen(PORT, () =>
+            console.log(`App has been started on port ${PORT}...`)
+        );
+    } catch (e) {
+        console.log("Server Error", e.message);
+        process.exit(1);
+    }
 }
 
 start();
